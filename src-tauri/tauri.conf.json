@@ -2,12 +2,12 @@
   "build": {
     "beforeDevCommand": "yarn dev",
     "beforeBuildCommand": "yarn build",
-    "devPath": "http://localhost:1480",
+    "devPath": "http://localhost:1420",
     "distDir": "../dist",
     "withGlobalTauri": false
   },
   "package": {
-    "productName": "sillytavern-launcher",
+    "productName": "sillytavern-starter",
     "version": "0.0.0"
   },
   "tauri": {
@@ -16,7 +16,6 @@
       "shell": {
         "all": false,
         "open": true,
-        "execute": true,
         "scope": [
           { "name": "install-git","cmd": "winget","args": ["install", "-e", "--id", "Git.Git"] },
           { "name": "git-installed", "cmd": "git", "args": ["--version"] }
@@ -42,7 +41,7 @@
       {
         "fullscreen": false,
         "resizable": true,
-        "title": "sillytavern-launcher",
+        "title": "sillytavern-starter",
         "width": 800,
         "height": 600
       }

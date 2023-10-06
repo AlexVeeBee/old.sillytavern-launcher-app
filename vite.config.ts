@@ -1,9 +1,9 @@
 import { defineConfig } from "vite";
-import solidPlugin from "vite-plugin-solid";
+import preact from "@preact/preset-vite";
 
 // https://vitejs.dev/config/
 export default defineConfig(async () => ({
-  plugins: [solidPlugin()],
+  plugins: [preact()],
 
   // Vite options tailored for Tauri development and only applied in `tauri dev` or `tauri build`
   //
@@ -11,7 +11,7 @@ export default defineConfig(async () => ({
   clearScreen: false,
   // 2. tauri expects a fixed port, fail if that port is not available
   server: {
-    port: 1480,
+    port: 1420,
     strictPort: true,
   },
   // 3. to make use of `TAURI_DEBUG` and other env variables

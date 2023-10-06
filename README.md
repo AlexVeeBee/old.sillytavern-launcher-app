@@ -1,6 +1,6 @@
-# Tauri + Solid + Typescript
+# Tauri + Preact + Typescript
 
-This template should help get you started developing with Tauri, Solid and Typescript in Vite.
+This template should help get you started developing with Tauri, Preact and Typescript in Vite.
 
 ## Recommended IDE Setup
 

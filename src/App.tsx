@@ -1,15 +1,15 @@
-import { createSignal } from "solid-js";
-import logo from "./assets/logo.svg";
+import { useState } from "preact/hooks";
+import preactLogo from "./assets/preact.svg";
 import { invoke } from "@tauri-apps/api/tauri";
 import "./App.css";
 
 function App() {
-  const [greetMsg, setGreetMsg] = createSignal("");
-  const [name, setName] = createSignal("");
+  const [greetMsg, setGreetMsg] = useState("");
+  const [name, setName] = useState("");
 
   async function greet() {
     // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
-    setGreetMsg(await invoke("greet", { name: name() }));
+    setGreetMsg(await invoke("greet", { name }));
   }
 
   return (
@@ -23,12 +23,12 @@ function App() {
         <a href="https://tauri.app" target="_blank">
           <img src="/tauri.svg" class="logo tauri" alt="Tauri logo" />
         </a>
-        <a href="https://solidjs.com" target="_blank">
-          <img src={logo} class="logo solid" alt="Solid logo" />
+        <a href="https://preactjs.com" target="_blank">
+          <img src={preactLogo} class="logo preact" alt="Preact logo" />
         </a>
       </div>
 
-      <p>Click on the Tauri, Vite, and Solid logos to learn more.</p>
+      <p>Click on the Tauri, Vite, and Preact logos to learn more.</p>
 
       <form
         class="row"
@@ -39,13 +39,13 @@ function App() {
       >
         <input
           id="greet-input"
-          onChange={(e) => setName(e.currentTarget.value)}
+          onInput={(e) => setName(e.currentTarget.value)}
           placeholder="Enter a name..."
         />
         <button type="submit">Greet</button>
       </form>
 
-      <p>{greetMsg()}</p>
+      <p>{greetMsg}</p>
     </div>
   );
 }

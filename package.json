@@ -1,23 +1,22 @@
 {
-  "name": "sillytavern-launcher",
+  "name": "sillytavern-starter",
+  "private": true,
   "version": "0.0.0",
-  "description": "",
+  "type": "module",
   "scripts": {
-    "start": "vite",
     "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
     "tauri": "tauri"
   },
-  "license": "MIT",
   "dependencies": {
-    "solid-js": "^1.7.8",
+    "preact": "^10.16.0",
     "@tauri-apps/api": "^1.5.0"
   },
   "devDependencies": {
+    "@preact/preset-vite": "^2.5.0",
     "typescript": "^5.0.2",
     "vite": "^4.4.4",
-    "vite-plugin-solid": "^2.7.0",
     "@tauri-apps/cli": "^1.5.0"
   }
 }
