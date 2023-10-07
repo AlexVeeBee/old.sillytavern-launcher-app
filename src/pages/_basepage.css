@@ -1,0 +1,16 @@
+div.basepage {
+    padding: 0 30px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.basepage>.inner {
+    width: 100%;
+    max-width: 800px;
+}
+div.basepage>.inner>.header>.title {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0;
+}

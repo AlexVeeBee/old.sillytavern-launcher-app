@@ -1,0 +1,30 @@
+/* <div class="card-container">
+<div class="header">
+    <h1>{title}</h1>
+</div>
+<div class="body">
+    {children}
+</div>
+</div> */
+
+div.card-container {
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #333;
+}
+div.card-container > .header {
+    width: 100%;
+    padding: 10px;
+    background-color: #1D1D1D;
+}
+div.card-container > .header > .title {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin: 0;
+}
+div.card-container > .body {
+    width: 100%;
+}
+div.card-container > .body .card-section {
+    padding: 10px;
+}

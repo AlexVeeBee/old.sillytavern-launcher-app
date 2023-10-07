@@ -8,7 +8,50 @@
   </head>
 
   <body>
-    <div id="root"></div>
+    <div id="root"> <div className="loading-container"> <div className="loading"> <div className="circle"></div> </div> </div> </div>
+    <style>
+      .loadingline-container {
+          position: relative;
+          width: 100%;
+          height: 3px;
+          overflow: hidden;
+          background-color: #034ea344;
+      }
+      .loadingline-container .loading .line {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          --color-start: #00ffd5;
+          --color-2: #13679e;
+          --color-3: #ff13eb;
+          background: linear-gradient(to right ,var(--color-start), var(--color-2),var(--color-3), var(--color-start));
+          animation: background-pan 3s infinite linear;
+          background-size: 200%;
+      }
+      @keyframes loading {
+          0% {
+              left: 0;
+              transform: translateX(-100%);
+          }
+          100% {
+              left: 100%;
+              transform: translateX(0);
+          }
+      }
+
+      .Magical-Text {
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-size: 200%;
+          animation: background-pan 3s infinite linear;
+      }
+      @keyframes background-pan {
+          from { background-position: 0%}
+          to { background-position: 200%;}
+      }
+    </style>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
