@@ -1,0 +1,25 @@
+div.status-widget {
+    display: flex;
+    flex-direction: row;
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px;
+    background-color: #0C0C0C;
+}
+div.status-widget > .status {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+div.status-widget > .status svg {
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+div.status-widget > .status > .status-text {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+div.status-widget > .status > .content {
+    opacity: 0.5;
+}

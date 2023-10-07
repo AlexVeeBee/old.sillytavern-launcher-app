@@ -1,0 +1,24 @@
+.loading-container{
+position: relative;
+padding: 24px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.loading-container .loading{
+position: absolute;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.loading-container .loading .circle{
+position: relative;
+width: 32px;
+height: 32px;
+border-radius: 50%;
+border: 2px solid #55555544;
+border-top-color: #888;
+animation: spin 0.5s linear infinite;
+filter: drop-shadow(0 0 2px #888);
+}
+@keyframes spin{ 0%{ rotate: 0deg; } 100%{ rotate: 360deg; } }

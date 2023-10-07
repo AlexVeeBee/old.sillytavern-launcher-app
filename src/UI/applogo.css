@@ -1,0 +1,10 @@
+div.applogo {
+    display: flex;
+    align-items: center;
+}
+
+div.applogo > .logo {
+    width: 75px;
+    height: 75px;
+    margin-right: 10px;
+}
