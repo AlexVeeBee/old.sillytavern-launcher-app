@@ -54,3 +54,24 @@ div.custominput button svg {
   width: 20px;
   height: 20px;
 }
+
+/* buttons */
+
+button {
+  --btn-bkg-color: #4E4E4E;
+  --btn-border-color: #707070;
+  background: var(--btn-bkg-color);
+  border: 1px solid var(--btn-border-color);
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button.btn.btn-primary {
+  --btn-bkg-color: #154184;
+  --btn-border-color: #065EA2;
+}

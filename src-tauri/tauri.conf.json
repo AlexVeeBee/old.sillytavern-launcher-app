@@ -19,6 +19,8 @@
         "execute": true,
         "scope": [
           { "name": "pwd", "cmd": "pwd", "args": [] },
+          { "name": "install-node", "cmd": "winget", "args": ["install", "-e", "--id", "OpenJS.NodeJS"] },
+          { "name": "node-installed", "cmd": "node", "args": ["--version"] },
           { "name": "install-git","cmd": "winget","args": ["install", "-e", "--id", "Git.Git"] },
           { "name": "git-installed", "cmd": "git", "args": ["--version"] },
           { "name": "git-clone-st", "cmd": "git", "args": [

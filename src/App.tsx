@@ -3,15 +3,21 @@ import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Setup from "./pages/setup";
 import InstallChecker from "./pages/checker";
+import LauncherDashboard from "./pages/home";
+import AppStart from "./pages/AppStart";
 
 const routes = createBrowserRouter([
   {
     path: "/",
-    element: <Setup />
+    element: <AppStart />
   },
   {
     path: "/checker",
     element: <InstallChecker />
+  },
+  {
+    path: "/launcher",
+    element: <LauncherDashboard />
   }
 ])
 
