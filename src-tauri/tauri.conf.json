@@ -8,7 +8,7 @@
   },
   "package": {
     "productName": "sillytavern-starter",
-    "version": "0.0.0"
+    "version": "0.0.1"
   },
   "tauri": {
     "allowlist": {
@@ -16,16 +16,59 @@
       "shell": {
         "all": false,
         "open": true,
+        "execute": true,
         "scope": [
+          { "name": "pwd", "cmd": "pwd", "args": [] },
           { "name": "install-git","cmd": "winget","args": ["install", "-e", "--id", "Git.Git"] },
-          { "name": "git-installed", "cmd": "git", "args": ["--version"] }
+          { "name": "git-installed", "cmd": "git", "args": ["--version"] },
+          { "name": "git-clone-st", "cmd": "git", "args": [
+            "clone",
+            "https://github.com/AlexVeeBee/jellytheme-Time-Machine"
+          ]},
+          { "name": "git-pull-st", "cmd": "git", "args": [
+            "pull",
+            "https://github.com/AlexVeeBee/jellytheme-Time-Machine"
+          ]}
         ]
+      },
+      "path": {
+        "all": true
+      },
+      "fs": {
+        "all": true,
+        "copyFile": true,
+        "createDir": true,
+        "exists": true,
+        "readDir": true,
+        "readFile": true,
+        "removeDir": true,
+        "removeFile": true,
+        "renameFile": true,
+        "scope": [
+          "read:all",
+          "write:all"
+        ],
+        "writeFile": true
+      },
+      "process": {
+        "all": false,
+        "exit": true,
+        "relaunch": true,
+        "relaunchDangerousAllowSymlinkMacos": false
+      },
+      "dialog": {
+        "all": false,
+        "ask": false,
+        "confirm": false,
+        "message": true,
+        "open": true,
+        "save": false
       }
     },
     "bundle": {
       "active": true,
       "targets": "all",
-      "identifier": "com.tauri.dev",
+      "identifier": "com.sillytavern.starter",
       "icon": [
         "icons/32x32.png",
         "icons/128x128.png",
@@ -43,7 +86,9 @@
         "resizable": true,
         "title": "sillytavern-starter",
         "width": 800,
-        "height": 600
+        "height": 600,
+        "minWidth": 400,
+        "minHeight": 300
       }
     ]
   }
