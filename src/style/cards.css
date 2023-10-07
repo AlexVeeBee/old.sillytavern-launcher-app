@@ -1,0 +1,13 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.card-container > .header > .title {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin: 0;
+}
