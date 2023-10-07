@@ -3,10 +3,7 @@ import Card from "../components/card";
 import BasePage from "./_basepage";
 
 import placeholderBKG from "../assets/backgrounds/00007-1550702270.png";
-import StatusWidget from "../UI/StatusWidget";
-import { useEffect, useState } from "preact/hooks";
-
-import { open } from "@tauri-apps/api/dialog";
+import { useEffect } from "preact/hooks";
 
 const BKG = () => {
     return (
@@ -29,8 +26,6 @@ const BKG = () => {
 }
 
 const Setup = () => {
-    const [st_path, set_st_path] = useState<string>("");
-
     useEffect(() => {
         const jumptocheker = () => {
             localStorage.removeItem("jump-to-checker");
@@ -72,10 +67,12 @@ const Setup = () => {
             >
                 <Card title="Sillytavern path">
                     <div class="card-section">
+                        <p>Place the launcher wherever you want to install Sillytavern</p>
+                        <p>If anyone knows to make git clone to a specific folder, please let me know</p>
                     </div>
-                    <StatusWidget status="Waiting" statusText="Checking current installation"/>
-                    <StatusWidget status="Paused" statusText="Install folder"/>
-                    <StatusWidget status="Paused" statusText="Install folder"/>
+                    {/* <StatusWidget status="Waiting" statusText="Checking current installation"/> */}
+                    {/* <StatusWidget status="Paused" statusText="Install folder"/> */}
+                    {/* <StatusWidget status="Paused" statusText="Install folder"/> */}
                 </Card>
                 <Card>
                     <div class="card-section flex align-center" style={{"gap": "12px"}}>
