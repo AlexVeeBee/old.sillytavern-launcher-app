@@ -33,8 +33,8 @@
             "https://github.com/AlexVeeBee/jellytheme-Time-Machine"
           ]},
           { "name": "npm-install", "cmd": "npm",
-            "args": []
-          }
+            "args": ["install"]
+          } 
         ]
       },
       "path": {
