@@ -1,6 +1,6 @@
 import './statuswidget.css';
 import svgs from '../SVG';
-export type Status = "Waiting" | "Downloading" | "Error" | "Done" | "Paused";
+export type Status = "Waiting" | "Downloading" | "Error" | "Done" | "Paused" | "Update";
 
 interface StatusWidgetProps {
     status: Status;
@@ -30,6 +30,8 @@ const StatusWidget = ({
                         svgs.check
                     : status === "Paused" ?
                         svgs.paused
+                    : status === "Update" ?
+                        svgs.update
                     : <></>
                 }
                 <p className="status-text">{statusText || status}</p>
