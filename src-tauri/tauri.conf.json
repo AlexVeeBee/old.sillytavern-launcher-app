@@ -14,11 +14,12 @@
     "allowlist": {
       "all": false,
       "shell": {
-        "all": false,
+        "all": true,
         "open": true,
         "execute": true,
         "scope": [
-          { "name": "pwd", "cmd": "pwd", "args": [] },
+          { "name": "cd-st", "cmd": "cd", "args": ["jellytheme-Time-Machine"] },
+          { "name": "cd-switch-st", "cmd": "cd", "args": ["../jellytheme-Time-Machine"] },
           { "name": "install-node", "cmd": "winget", "args": ["install", "-e", "--id", "OpenJS.NodeJS"] },
           { "name": "node-installed", "cmd": "node", "args": ["--version"] },
           { "name": "install-git","cmd": "winget","args": ["install", "-e", "--id", "Git.Git"] },
@@ -30,7 +31,10 @@
           { "name": "git-pull-st", "cmd": "git", "args": [
             "pull",
             "https://github.com/AlexVeeBee/jellytheme-Time-Machine"
-          ]}
+          ]},
+          { "name": "npm-install", "cmd": "npm",
+            "args": []
+          }
         ]
       },
       "path": {
