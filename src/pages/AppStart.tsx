@@ -16,7 +16,7 @@ const AppStart = () => {
             return;
         }
 
-        router.navigate("/launcher");
+        router.navigate("/checker");
     });
 
     return (
